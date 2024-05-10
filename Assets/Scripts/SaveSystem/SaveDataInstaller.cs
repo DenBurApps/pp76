@@ -7,6 +7,7 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.iOS;
 using UnityEngine.SceneManagement;
 
 public class SaveDataInstaller : MonoBehaviour
@@ -18,6 +19,7 @@ public class SaveDataInstaller : MonoBehaviour
     private void Start()
     {
         InstallBindings();
+        Device.RequestStoreReview();
     }
 
     private void InstallBindings()
